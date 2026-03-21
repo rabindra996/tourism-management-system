@@ -1,29 +1,72 @@
-# Tourism-Management-System
+# 🌍 Tourism Management System
 
-This is a Tourism Management System Project build by using html, css, javascript, php, MySQL as mini project in the 5th semister of engineering.
-This website has cool SignUp/SignIn page where you can enter your details and SignUp.
-It stores your data in the database using php and MySQL queries.
-This website has a cool front page where you can see many destinations, you can also get the data about each place.
-There is also a galery section where you can see the beautifull pictures of all the destinations.
-This website also has the admin login admin can get the information of the customers, travel agents, also can add new places, hotels.
-There is cool and nice booking page where you can book your tour by entering your details.
-This website also has a feedback section where you can give your feedback to the developer.
+This is a web-based **Tourism Management System** developed as a mini project during the 5th semester of B.Tech in Computer Science. The project allows users to explore destinations, register/login, and book tours online.
 
-# New Changes
+---
 
-improved performance
-login signup isssues fixed
-styling issues fixed
+## 🚀 Features
 
-# Use Procedure
+* 🔐 User Authentication (Sign Up / Login)
+* 🏝️ Explore tourist destinations
+* 🖼️ Gallery section for destination images
+* 📅 Tour booking system
+* 🧑‍💼 Admin panel:
 
-please chanage the port number with your port number - I used 3307 as port number but for your case it may be 3306 please change that
+  * Manage users
+  * Add new places and hotels
+* 💬 Feedback system
 
-please change username and password if that applicable to you
+---
 
-create database called "travel", don't give any other name,
-if you want different name for database then make sure that you change database ame in code also
+## 🛠️ Technologies Used
 
-database file also provided
+* HTML
+* CSS
+* JavaScript
+* PHP
+* MySQL
 
-Thank You....
+---
+
+## ⚙️ How to Run (Important)
+
+This project requires a local server (like XAMPP).
+
+### Steps:
+
+1. Install and start **XAMPP**
+2. Move the project folder to:
+   `htdocs`
+3. Start **Apache** and **MySQL**
+4. Open phpMyAdmin
+5. Create a database named:
+   `travel`
+6. Import the provided database file
+7. Update database credentials in the code if needed:
+
+   * Username: `root`
+   * Password: (default empty)
+   * Port: `3306` (or your configured port)
+8. Run the project in browser:
+   `http://localhost/your-folder-name/`
+
+---
+
+## 🔄 Updates
+
+* Improved performance
+* Fixed login & signup issues
+* UI/Styling improvements
+
+---
+
+## ⚠️ Note
+
+This project cannot be deployed on GitHub Pages because it uses PHP (backend).
+
+---
+
+## 🙌 Author
+
+Rabindra Kumar Manna
+B.Tech CSE Student 🚀
