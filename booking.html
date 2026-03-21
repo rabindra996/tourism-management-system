@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Form</title>
+	<link rel="stylesheet" type="text/css" href="css/booking.css">
+	<script>
+		function validateForm() {
+			if (isEmpty(document.getElementById('data_3').value.trim())) {
+				alert('First name is required!');
+				return false;
+			}
+			if (isEmpty(document.getElementById('data_4').value.trim())) {
+				alert('Last name is required!');
+				return false;
+			}
+			if (!validateEmail(document.getElementById('data_5').value.trim())) {
+				alert('Email must be a valid email address!');
+				return false;
+			}
+			return true;
+		}
+		function isEmpty(str) { return (str.length == 0 || !str.trim()); }
+		function validateEmail(email) {
+			var re = "";
+			return isEmpty(email) || re.test(email);
+		}
+	</script>
+	<style>
+	body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1c5e6b;
+		
+			.large-text {
+			  font-size: 100px; /* You can adjust this value to increase or decrease the size */
+			}
+			.centered-text {
+				text-align: center;
+				background-color: #efe9e9;
+			  }
+    }
+</style>
+</head>
+<div >
+	<div class="main">
+		<ul>
+			<ul class="list">
+			<!-- <li class="logo"><a href="mainPage.html"><img src="icon.png" alt="Logo" style="width:36px;height:36px"></a></li> -->
+			<div class="search">
+                <!-- <form method="POST" action="info.php">
+                  <input type="text" name="search_p" placeholder="Search.." size="50">
+              
+                  <input type="image" name="submit_p" src="search_icon.png" alt="Search image" style="width:22;height:22; margin-left: 35px;">
+                </form> -->
+            </div>
+			</ul>
+			<ul class="list2">
+			<li><a href="mainPage.html">Home</a></li>
+			<li ><a href="aboutus.html">About Us</a></li>
+			<li><a id="long" href="destination.html">Destination</a></li>
+			<li><a href="travel.html">Travel</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li class="active-menu"><a href="booking.html">Booking</a></li>
+			<li><a href="feedback.html">Feedback</a></li>
+			<li><a href="index.html">Logout</a></li>
+			</ul>
+		</ul>
+	</div>
+	<div class="centered-text">
+	<h1><span class="large-text" >Tour Booking</span></h1>
+	</div>
+	<div class="container">
+		<h3>Fill the information!!</h3>
+		
+		<form method="POST" action="booking.php" name="form" onsubmit="return validateForm()">
+			<div class="textbox">
+				<input type="text" placeholder="Full Name" name="name" value=""  onkeypress="return /[a-zA-Z]/i.test(event.key)" required>  
+			</div>
+
+			<div class="textbox">
+				<input type="text" placeholder="Email" name="email" value="" required pattern="[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+.[a-z]{2,4}" title="Invalid Email">
+			</div>
+
+			<div class="textbox">
+				<input type="text" placeholder="Phone" name="phone" value="" onkeypress="return /[0-9]/i.test(event.key)" maxlength="10" pattern="([0-9]){10,}" required>
+			</div>
+
+			<div class="textbox">
+				<input type="text" placeholder="City" name="city" value="" onkeypress="return /[a-zA-Z]/i.test(event.key)" required>
+			</div>
+
+			<div class="textbox">
+				<input type="text" placeholder="Destination" name="destination" value="" required>
+			</div>
+
+			<div class="textbox">
+				<input type="number" placeholder="no. of guests" name="guest" value="" required>
+			</div>
+
+			<div class="textbox">
+				<input type="date" placeholder="check-in date" id="arrivals" name="checkin" value="" required>
+			</div>
+
+			<div class="textbox">
+				<input type="date" placeholder="check-out date" id="leaving" name="checkout"  value="" required>
+			</div>
+			<script>
+				// JavaScript to validate arrival and leaving dates
+				document.getElementById("leaving").addEventListener("change", function() {
+					var arrivals = new Date(document.getElementById("arrivals").value);
+					var leaving = new Date(this.value);
+			
+					if (leaving < arrivals) {
+						document.getElementById("dateError").textContent = "Leaving date should be greater than or equal to arrival date";
+					} else {
+						document.getElementById("dateError").textContent = "";
+					}
+				});
+			</script>
+
+			<div class="textbox">
+				<input type="text" placeholder="Mode of travel" name="travel" value="" required>
+			</div>
+			<div class="btn">
+				<input name="submit" value="Submit" type="submit">
+				<span></span>
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
