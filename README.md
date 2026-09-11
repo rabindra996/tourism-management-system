@@ -4,7 +4,7 @@ This is a web-based **Tourism Management System** developed as a mini project du
 
 ---
 
-## 🚀 Features
+## Features
 
 * 🔐 User Authentication (Sign Up / Login)
 * 🏝️ Explore tourist destinations
@@ -69,4 +69,4 @@ This project cannot be deployed on GitHub Pages because it uses PHP (backend).
 ## 🙌 Author
 
 Rabindra Kumar Manna
-B.Tech CSE Student 🚀
+B.Tech CSE Student 
